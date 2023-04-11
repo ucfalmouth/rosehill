@@ -1,29 +1,67 @@
 /* custom style for theme_rosehill */
 
-/* CHANGE COLOUR OF ALL LINKS */
+$primary-yellow: #f6ce4c;
+$accent-yellow: #e2be47;
+
+$primary-green: #116a6c;
+$accent-green: #0d5456;
+
+/* change colour of all links */
 a:link,
 a:visited {
-	color: #116a6c;
+	color: $primary-green;
 }
 a:hover,
 a:active {
-	color: #0d5456;
+	color: $accent-green;
 }
 
+/* gradient tint page background */
+body {
+	background: linear-gradient(#eee, #fff);
+}
+
+/* change colour of primary buttons */
+.btn-primary {
+	background-color: $primary-green;
+	border-color: $primary-green;
+}
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary.focus {
+	background-color: $accent-green;
+	border-color: $accent-green;
+}
+.btn-primary:not(:disabled):not(.disabled):active,
+.btn-primary:not(:disabled):not(.disabled).active,
+.show > .btn-primary.dropdown-toggle {
+	background-color: $accent-green;
+	border-color: $accent-green;
+}
+
+/* Calendar on dashboard */
+.maincalendar .bottom span.footer-link:after {
+	color: $primary-green;
+}
+.maincalendar .calendarmonth td.today .day-number-circle {
+	background-color: $primary-green;
+}
+
+/* Only displays in footer when debugging active */
 .footer-content-debugging.bg-dark.text-light a {
 	color: #f8f9fa !important;
 }
 
-/* HEADER */
-.navbar.fixed-top {
-	background-color: #f6ce4c !important;
+/* header */
+.navbar.fixed-top.bg-white {
+	background-color: $primary-yellow !important;
 }
-/* override hover colour */
+/* override hover colour for main navigation */
 .navbar-nav .nav-link:hover {
-	background-color: #e2be47 !important;
+	background-color: $accent-yellow !important;
 }
 .navbar-nav .border-left {
-	border-color: #e2be47 !important;
+	border-color: $accent-yellow;
 }
 
 /* SVG - logo added to navbar.mustache */
@@ -34,7 +72,17 @@ a:active {
 	margin-right: .3em;
 }
 
-/* PAGE CONTENT - NAV force navigation to full-width */
+/* optional: sticky secondary navigation on scroll, replaces bottom padding w/margin */
+.secondary-navigation {
+	position: sticky;
+	top: 0;
+	background-color: #fff;
+	z-index: 999;
+	padding-bottom: 0;
+	margin-bottom: 15px;
+}
+
+/* page content - force navigation to full-width */
 .secondary-navigation .navigation .nav-tabs {
 	max-width: 100%;
 }
@@ -44,19 +92,21 @@ a:active {
 	margin: 0 !important;
 } */
 
-/* SIDE MENU - recolour links */
+/* side menu - re-colour links */
 .courseindex .courseindex-item.pageitem {
-	background-color: #116a6c !important;
+	background-color: $primary-green !important;
 }
 .moremenu .nav-link.active {
-	border-color: #116a6c !important;
+	border-color: $primary-green !important;
 	border-top: transparent;
 }
+
+/* changing colour of resource icons */
 .courseindex .courseindex-section a[href*="resource"] {
 	color: #999 !important;
 }
 
-/* CUSTOMISATION */
+/* Login customisation */
 body.pagelayout-login {
 	background-image: url([[pix:theme_rosehill|loginbackgroundimage]]);
 	background-size: cover;
