@@ -21,6 +21,11 @@ body {
 	background: linear-gradient(#eee, #fff);
 }
 
+/* fix text colour of anchor tags that are styled as buttons */
+a.btn-primary {
+	color: #fff;
+}
+
 /* change colour of primary buttons */
 .btn-primary {
 	background-color: $primary-green;
@@ -101,9 +106,36 @@ body {
 	border-top: transparent;
 }
 
+.activity-info .btn-sm {
+	margin-bottom: 1em;
+}
+
+/* resize document icons */
+/*
+.activityiconcontainer {
+	width: 30px;
+	height: 30px;
+}
+.activityiconcontainer .activityicon {
+	width: 20px;
+	height: 20px;
+}
+*/
 /* changing colour of resource icons */
-.courseindex .courseindex-section a[href*="resource"] {
+/*
+.courseindex .courseindex-section a[href*="/resource/"] {
 	color: #999 !important;
+}
+*/
+
+/* reduce padding top/bottom on nav items > ul > li */
+.courseindex .courseindex-section .courseindex-sectioncontent .courseindex-item {
+	padding-top: .1rem;
+	padding-bottom: .1rem;
+}
+/* add extra space to bottom of list */
+.courseindex-section .courseindex-sectioncontent .courseindex-item:last-child {
+	margin-bottom: .5rem;
 }
 
 /* Login customisation */
