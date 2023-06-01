@@ -77,6 +77,22 @@ a.btn-primary {
 	margin-right: .3em;
 }
 
+/* hide primary nav entries */
+.navbar li[data-key="home"] {
+	display: none;
+}
+
+/* restyle course "add sections" link as button */
+.changenumsections a {
+	background-color: $primary-green;
+	color: #fff;
+	padding: 5px 10px 7px 8px;
+	border-radius: 6px;
+}
+.changenumsections a::before {
+	content: "+ ";
+}
+
 /* optional: sticky secondary navigation on scroll, replaces bottom padding w/margin */
 .secondary-navigation {
 	position: sticky;
@@ -134,7 +150,7 @@ a.btn-primary {
 	padding-bottom: .1rem;
 }
 /* add extra space to bottom of list */
-.courseindex-section .courseindex-sectioncontent .courseindex-item:last-child {
+.courseindex .courseindex-section .courseindex-sectioncontent .courseindex-item:last-child {
 	margin-bottom: .5rem;
 }
 
