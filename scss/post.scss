@@ -82,6 +82,13 @@ a.btn-primary {
 	display: none;
 }
 
+/* hide secondary nav entries */
+.secondary-navigation li[data-key="questionbank"],
+.secondary-navigation li[data-key="contentbank"] {
+	display: none;
+}
+
+
 /* restyle course "add sections" link as button */
 .changenumsections a {
 	background-color: $primary-green;
@@ -137,12 +144,33 @@ a.btn-primary {
 	height: 20px;
 }
 */
-/* changing colour of resource icons */
+/* changing colour of resource links in course menu */
 /*
 .courseindex .courseindex-section a[href*="/resource/"] {
 	color: #999 !important;
 }
 */
+
+/* change default colours of activity icons – only these classes/colours can be re-styled */
+/* inner elements .activityicon & .icon use filter: invert(1) */
+.activityiconcontainer.administration {
+	background-color: #5d63f6;
+}
+.activityiconcontainer.assessment {
+	background-color: #eb66a2;
+}
+.activityiconcontainer.collaboration {
+	background-color: #f7634d;
+}
+.activityiconcontainer.communication {
+	background-color: #11a676;
+}
+.activityiconcontainer.content {
+	background-color: #399be2;
+}
+.activityiconcontainer.interface {
+	background-color: #a378ff;
+}
 
 /* reduce padding top/bottom on nav items > ul > li */
 .courseindex .courseindex-section .courseindex-sectioncontent .courseindex-item {
