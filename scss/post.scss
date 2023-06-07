@@ -96,9 +96,14 @@ a.btn-primary {
 /* restyle course "add sections" link as button */
 .changenumsections a {
 	background-color: $primary-green;
+	border: 1px solid $accent-green;
 	color: #fff;
 	padding: 5px 10px 7px 8px;
 	border-radius: 6px;
+}
+.changenumsections a:hover {
+	text-decoration: none;
+	background-color: $accent-green;
 }
 .changenumsections a::before {
 	content: "+ ";
@@ -206,7 +211,7 @@ div.dt-button-collection div.dt-button.active:not(.disabled),
 div.dt-button-collection a.dt-button:active:not(.disabled),
 div.dt-button-collection a.dt-button.active:not(.disabled),
 button.dt-button, div.dt-button, a.dt-button {
-	border-color: $accent-green;
+	border: 1px solid $accent-green;
 	background-color: $primary-green;
 	color: #fff;
 	background-image: none;
