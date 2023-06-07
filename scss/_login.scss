@@ -15,6 +15,9 @@ body.pagelayout-login #page {
 body.pagelayout-login div#page-wrapper {
     background: url([[pix:theme_rosehill|login-bg]]);
     background-size: cover;
+    > div {
+        z-index: 1;
+    }
 }
 
 body.pagelayout-login #page-wrapper::before {
@@ -59,7 +62,7 @@ body.pagelayout-login #page-wrapper::before {
 
 .footer-links {
     margin: 0;
-    padding: 1rem;
+    padding: 1rem 0;
     list-style: none;
     display: flex;
     flex-wrap: wrap;
