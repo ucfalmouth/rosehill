@@ -138,11 +138,6 @@ a.btn-primary {
 	margin-bottom: .5rem;
 }
 
-/* Login customisation */
-body.pagelayout-login {
-	background-image: url([[pix:theme_rosehill|loginbackgroundimage]]);
-	background-size: cover;
-}
 
 @media (min-width: 768px) {
 
@@ -155,3 +150,5 @@ body.pagelayout-login {
 		max-width: 100%;
 	}
 }
+
+@import './login';
