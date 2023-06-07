@@ -295,6 +295,13 @@ button.dt-button, div.dt-button, a.dt-button {
 	margin-bottom: .5rem;
 }
 
+/* ----------------- */
+/* FOOTER */
+/* hide default help menu (bottom right) */
+#page-footer .btn.btn-icon {
+	display: none;
+}
+
 @media (min-width: 768px) {
 
 	/* PAGE CONTENT - force width to full-width */
