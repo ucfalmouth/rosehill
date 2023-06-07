@@ -49,7 +49,6 @@ $THEME->scss = function($theme) {
 // @ini_set('display_errors', '1');
 // $CFG->debug = (E_ALL | E_STRICT);
 // $CFG->debugdisplay = 1;
-
 // USEFUL DOCS
 // https://docs.moodle.org/dev/Creating_a_theme_based_on_boost
 // https://docs.moodle.org/dev/SCSS
