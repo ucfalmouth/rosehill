@@ -45,11 +45,10 @@ $THEME->scss = function($theme) {
 // $THEME->extrascsscallback = 'theme_rosehill_get_extra_scss';
 
 // DEBUG_DEVELOPER - NOT FOR PRODUCTION SERVERS!
-@error_reporting(E_ALL | E_STRICT);
-@ini_set('display_errors', '1');
-$CFG->debug = (E_ALL | E_STRICT);
-$CFG->debugdisplay = 1;
-$CFG->cachejs = false;
+// @error_reporting(E_ALL | E_STRICT);
+// @ini_set('display_errors', '1');
+// $CFG->debug = (E_ALL | E_STRICT);
+// $CFG->debugdisplay = 1;
 // USEFUL DOCS
 // https://docs.moodle.org/dev/Creating_a_theme_based_on_boost
 // https://docs.moodle.org/dev/SCSS
