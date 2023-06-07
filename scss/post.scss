@@ -212,6 +212,7 @@ div.dt-button-collection a.dt-button:active:not(.disabled),
 div.dt-button-collection a.dt-button.active:not(.disabled),
 button.dt-button, div.dt-button, a.dt-button {
 	border: 1px solid $accent-green;
+	border-radius: 6px;
 	background-color: $primary-green;
 	color: #fff;
 	background-image: none;
