@@ -44,6 +44,7 @@ a.btn-primary {
 	border-color: $accent-green;
 }
 
+/* ----------------- */
 /* Calendar on dashboard */
 .maincalendar .bottom span.footer-link:after {
 	color: $primary-green;
@@ -57,6 +58,7 @@ a.btn-primary {
 	color: #f8f9fa !important;
 }
 
+/* ----------------- */
 /* header */
 .navbar.fixed-top.bg-white {
 	background-color: $primary-yellow !important;
@@ -75,6 +77,31 @@ a.btn-primary {
 	display: inline;
 	float: left;
 	margin-right: .3em;
+}
+
+/* ----------------- */
+/* hide primary nav entries */
+.navbar li[data-key="home"] {
+	display: none;
+}
+
+/* hide secondary nav entries */
+.secondary-navigation li[data-key="questionbank"],
+.secondary-navigation li[data-key="contentbank"] {
+	display: none;
+}
+
+
+/* COURSES */
+/* restyle course "add sections" link as button */
+.changenumsections a {
+	background-color: $primary-green;
+	color: #fff;
+	padding: 5px 10px 7px 8px;
+	border-radius: 6px;
+}
+.changenumsections a::before {
+	content: "+ ";
 }
 
 /* optional: sticky secondary navigation on scroll, replaces bottom padding w/margin */
@@ -110,6 +137,7 @@ a.btn-primary {
 	margin-bottom: 1em;
 }
 
+/* ----------------- */
 /* resize document icons */
 /*
 .activityiconcontainer {
@@ -121,23 +149,151 @@ a.btn-primary {
 	height: 20px;
 }
 */
-/* changing colour of resource icons */
+
+/* changing colour of resource links in course menu */
 /*
 .courseindex .courseindex-section a[href*="/resource/"] {
 	color: #999 !important;
 }
 */
 
+
+/* ----------------- */
+/* change default colours of activity icons – only these classes/colours can be re-styled */
+/* inner elements .activityicon & .icon use filter: invert(1) */
+.activityiconcontainer.administration {
+	background-color: #5d63f6;
+}
+.activityiconcontainer.assessment {
+	background-color: #eb66a2;
+}
+.activityiconcontainer.collaboration {
+	background-color: #f7634d;
+}
+.activityiconcontainer.communication {
+	background-color: #11a676;
+}
+.activityiconcontainer.content {
+	background-color: #399be2;
+}
+.activityiconcontainer.interface {
+	background-color: #a378ff;
+}
+
+/* ----------------- */
+/* My assessment and feedback */
+.path-report-myfeedback .nav.nav-tabs {
+	font-size: 1em;
+}
+.path-report-myfeedback .heading h2 {
+	padding-left: 0;
+	background: transparent;
+	color: #1d2125;
+}
+
+/* button/link styling */
+.path-report-myfeedback #reportPrint,
+.path-report-myfeedback .buttonswrapper input[type="button"],
+.path-report-myfeedback .dt-buttons a,
+.path-report-myfeedback .personaltutoremail,
+.path-report-myfeedback .pToggle,
+.path-report-myfeedback .sToggle,
+.path-report-myfeedback .aToggle,
+div.dt-button-collection button.dt-button:active:not(.disabled),
+div.dt-button-collection button.dt-button.active:not(.disabled),
+div.dt-button-collection div.dt-button:active:not(.disabled),
+div.dt-button-collection div.dt-button.active:not(.disabled),
+div.dt-button-collection a.dt-button:active:not(.disabled),
+div.dt-button-collection a.dt-button.active:not(.disabled),
+button.dt-button, div.dt-button, a.dt-button {
+	border-color: $accent-green;
+	background-color: $primary-green;
+	color: #fff;
+	background-image: none;
+	padding-right: 6px;
+	white-space: normal;
+}
+.path-report-myfeedback #reportPrint:hover,
+.path-report-myfeedback .buttonswrapper input[type="button"]:hover,
+.path-report-myfeedback .dt-buttons a:hover {
+	background-color: $accent-green;
+}
+
+/* academic year select menu */
+.path-report-myfeedback .ac-year-right {
+	float: right;
+	margin: 0;
+	overflow: hidden;
+}
+.path-report-myfeedback .ac-year-right p,
+.path-report-myfeedback .ac-year-right form {
+	float: left;
+}
+
+/* target report/feedback navigation entries to be hidden */
+.path-report-myfeedback .nav-tabs a[title*="Module tutor dashboard"],
+.path-report-myfeedback .nav-tabs a[title*="My students"],
+.path-report-myfeedback .nav-tabs a[title*="Feedback comments"],
+.path-report-myfeedback .nav-tabs a[title*="Usage dashboard"] {
+	display: none;
+}
+/* Hide report/feedback navigation completely */
+/*
+.path-report-myfeedback .nav.nav-tabs.mb-3 {
+	display: none;
+}
+*/
+
+/* alignment and whitespace corrections – matching M3.11 */
+.path-report-myfeedback table.dataTable {
+	float: left;
+	margin-top: 20px;
+}
+.path-report-myfeedback .dataTables_wrapper {
+	margin-top: 24px;
+	padding: 24px 16px;
+	background: #f5f7f7;
+	overflow-y: scroll;
+}
+.path-report-myfeedback .buttonswrapper {
+	overflow: hidden;
+	margin-bottom: 24px;
+	margin-top: 24px;
+}
+
+/* customise report table header background colour - optional? */
+/*
+.path-report-myfeedback table#feedbackcomments tr.tableheader, .path-report-myfeedback table tr.tableheader,
+.path-report-myfeedback table.grades th {
+	background: #dce9f9;
+	background-image: linear-gradient(to bottom,#ebf3fc,#dce9f9);
+}
+*/
+
+/* copied from M3.11 not sure if need to be kept for M4 until content populated */
+.path-report-myfeedback .ellip {
+	overflow: visible;
+	white-space: normal;
+	text-overflow: inherit;
+}
+.path-report-myfeedback .personaltutoremail>a {
+	display: block;
+}
+.path-report-myfeedback .personaltutoremail>img {
+	display: none;
+}
+
+
+/* COURSE NAVIGATION */
 /* reduce padding top/bottom on nav items > ul > li */
 .courseindex .courseindex-section .courseindex-sectioncontent .courseindex-item {
 	padding-top: .1rem;
 	padding-bottom: .1rem;
 }
 /* add extra space to bottom of list */
-.courseindex-section .courseindex-sectioncontent .courseindex-item:last-child {
+.courseindex .courseindex-section .courseindex-sectioncontent .courseindex-item:last-child {
 	margin-bottom: .5rem;
 }
-
 
 @media (min-width: 768px) {
 

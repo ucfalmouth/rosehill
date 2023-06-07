@@ -29,6 +29,11 @@ defined('MOODLE_INTERNAL') || die;
  * @copyright  2023 Falmouth University
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
+
+/**
+ * Overrides for the standard implementation of the core_renderer interface.
+ * Original classes located in lib/outputrenders.php and in boost/classes/output/core_renderer.php
+ */
 class core_renderer extends \theme_boost\output\core_renderer { 
 
     /**
@@ -56,7 +61,19 @@ class core_renderer extends \theme_boost\output\core_renderer {
         
         // return 'this is a test';
         return $this->render_from_template('theme_rosehill/footer-links', $templatedata);
+ 
+    }
+  
+  
+    /*
+    * change colour of default course background overview to be uniform
+    */
+    public function get_generated_color_for_id($id) {
 
+      // $color = '#f6ce4c'; // primary-yellow
+      $color = '#116a6c'; // primary-green
+
+      return $color;
     }
 
 }
