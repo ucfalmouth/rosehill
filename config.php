@@ -42,7 +42,7 @@ $THEME->scss = function($theme) {
 	return theme_rosehill_get_main_scss_content($theme);
 };
 
-$THEME->removedprimarynavitems = ['home'];
+$THEME->removedprimarynavitems = ['home','courses'];
 
 // DEBUG_DEVELOPER - NOT FOR PRODUCTION SERVERS!
 // @error_reporting(E_ALL | E_STRICT);
