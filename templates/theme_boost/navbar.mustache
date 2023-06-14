@@ -101,6 +101,10 @@
 		{{/langmenu}}
 		{{{ output.navbar_plugin_output }}}
 		<div class="d-flex align-items-stretch usermenu-container" data-region="usermenu">
+			<a href="http://etsupport.freshdesk.com/support/solutions/4000006971" id="ls-elevio-trigger" class="nav-link icon-no-margin ls-elevio-trigger" title="Help">
+				<i class="icon fa fa-question-circle fa-fw " aria-hidden="true" title="Help" aria-label="Help"></i>
+				<span class="sr-only">Help</span>
+			</a>
 			{{#usermenu}}
 				{{> core/user_menu }}
 			{{/usermenu}}
@@ -110,3 +114,16 @@
 </nav>
 
 {{> theme_boost/primary-drawer-mobile }}
+{{#js}}
+	M.util.js_pending('theme_boost/loader');
+	require(['theme_boost/loader'], function() {
+	M.util.js_complete('theme_boost/loader');
+	});
+
+	require(['theme_rosehill/navigation'], (module) => {
+		module.init();
+	});
+
+	require(['theme_rosehill/elevio-help']);
+{{/js}}
+

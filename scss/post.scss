@@ -79,11 +79,21 @@ a.btn-primary {
 	margin-right: .3em;
 }
 
-/* ----------------- */
-/* hide primary nav entries */
-.navbar li[data-key="home"] {
-	display: none;
+/* ELEVIO button (primary nav menu) */
+.ls-elevio-trigger {
+	display: inline-block;
+	.icon {
+		width: 24px;
+		height: 24px;
+		font-size: 24px;
+		margin: 0;
+	}
 }
+/* ELEVIO help (inline at bottom of page) */
+._elevio_launcher {
+	display: none !important;
+}
+
 
 /* hide secondary nav entries */
 .secondary-navigation li[data-key="questionbank"],
@@ -125,9 +135,9 @@ a.btn-primary {
 }
 
 /* if less than 100% max-width is required, force content left */
-/* #page.drawers .main-inner {
-	margin: 0 !important;
-} */
+// #page.drawers .main-inner {
+// 	margin: 0 !important;
+// }
 
 /* side menu - re-colour links */
 .courseindex .courseindex-item.pageitem {
@@ -144,23 +154,21 @@ a.btn-primary {
 
 /* ----------------- */
 /* resize document icons */
-/*
-.activityiconcontainer {
-	width: 30px;
-	height: 30px;
-}
-.activityiconcontainer .activityicon {
-	width: 20px;
-	height: 20px;
-}
-*/
+// .activityiconcontainer {
+// 	width: 30px;
+// 	height: 30px;
+// }
+// .activityiconcontainer .activityicon {
+// 	width: 20px;
+// 	height: 20px;
+// }
+
 
 /* changing colour of resource links in course menu */
-/*
-.courseindex .courseindex-section a[href*="/resource/"] {
-	color: #999 !important;
-}
-*/
+// .courseindex .courseindex-section a[href*="/resource/"] {
+// 	color: #999 !important;
+// }
+
 
 
 /* ----------------- */
@@ -244,11 +252,10 @@ button.dt-button, div.dt-button, a.dt-button {
 	display: none;
 }
 /* Hide report/feedback navigation completely */
-/*
-.path-report-myfeedback .nav.nav-tabs.mb-3 {
-	display: none;
-}
-*/
+// .path-report-myfeedback .nav.nav-tabs.mb-3 {
+// 	display: none;
+// }
+
 
 /* alignment and whitespace corrections – matching M3.11 */
 .path-report-myfeedback table.dataTable {
@@ -268,13 +275,11 @@ button.dt-button, div.dt-button, a.dt-button {
 }
 
 /* customise report table header background colour - optional? */
-/*
-.path-report-myfeedback table#feedbackcomments tr.tableheader, .path-report-myfeedback table tr.tableheader,
-.path-report-myfeedback table.grades th {
-	background: #dce9f9;
-	background-image: linear-gradient(to bottom,#ebf3fc,#dce9f9);
-}
-*/
+// .path-report-myfeedback table#feedbackcomments tr.tableheader, .path-report-myfeedback table tr.tableheader,
+// .path-report-myfeedback table.grades th {
+// 	background: #dce9f9;
+// 	background-image: linear-gradient(to bottom,#ebf3fc,#dce9f9);
+// }
 
 /* copied from M3.11 not sure if need to be kept for M4 until content populated */
 .path-report-myfeedback .ellip {
@@ -299,6 +304,21 @@ button.dt-button, div.dt-button, a.dt-button {
 /* add extra space to bottom of list */
 .courseindex .courseindex-section .courseindex-sectioncontent .courseindex-item:last-child {
 	margin-bottom: .5rem;
+}
+/* fix to move the mobile course menu in front of secondary menu */
+.drawer-toggles .drawer-right-toggle, .drawer-toggles .drawer-left-toggle {
+	z-index: 1000;
+}
+/* style "course index" header added via JS */
+#theme_boost-drawers-courseindex .drawerheader .courseindex {
+	display: block;
+	width: 100%;
+	font-weight: bold;
+	background-color: #000;
+	color: #fff;
+	border-radius: 5px;
+	padding: 0.15em 0.6em 0.25em;
+	margin: 15px 3em auto .4em;
 }
 
 /* ----------------- */
