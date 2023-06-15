@@ -46,12 +46,12 @@ a.btn-primary {
 
 /* ----------------- */
 /* Calendar on dashboard */
-.maincalendar .bottom span.footer-link:after {
-	color: $primary-green;
-}
-.maincalendar .calendarmonth td.today .day-number-circle {
-	background-color: $primary-green;
-}
+// .maincalendar .bottom span.footer-link:after {
+// 	color: $primary-green;
+// }
+// .maincalendar .calendarmonth td.today .day-number-circle {
+// 	background-color: $primary-green;
+// }
 
 /* Only displays in footer when debugging active */
 .footer-content-debugging.bg-dark.text-light a {
@@ -294,6 +294,11 @@ button.dt-button, div.dt-button, a.dt-button {
 	display: none;
 }
 
+/* COURSE OVERVIEW */
+/* hide Summary option from menu */
+.dropdown .dropdown-menu a[data-value="summary"] {
+	display: none;
+}
 
 /* COURSE NAVIGATION */
 /* reduce padding top/bottom on nav items > ul > li */
@@ -319,6 +324,7 @@ button.dt-button, div.dt-button, a.dt-button {
 	border-radius: 5px;
 	padding: 0.15em 0.6em 0.25em;
 	margin: 15px 3em auto .4em;
+	text-transform: capitalize;
 }
 
 /* ----------------- */
