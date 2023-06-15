@@ -24,5 +24,12 @@
 import $ from 'jquery';
 
 export const init = () => {
-    $('#theme_boost-drawers-courseindex .drawerheader button').after('<div class="courseindex">Course index</div>');
+
+    let button = $('#theme_boost-drawers-courseindex .drawerheader button');
+
+    if(button.length > 0) {
+        let buttonText = button.attr('title').replace('Close ','');
+        button.after('<div class="courseindex">' + buttonText + '</div>');
+    }
+
 };
