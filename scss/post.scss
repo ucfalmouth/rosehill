@@ -6,6 +6,9 @@ $accent-yellow: #e2be47;
 $primary-green: #116a6c;
 $accent-green: #0d5456;
 
+$dark-grey: #222222;
+$dark-text: #333333;
+
 /* change colour of all links */
 a:link,
 a:visited {
@@ -346,4 +349,5 @@ button.dt-button, div.dt-button, a.dt-button {
 	}
 }
 
+@import './footer';
 @import './login';
