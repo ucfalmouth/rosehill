@@ -15,7 +15,7 @@
     along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 }}
 {{!
-    @template theme_boost/drawers
+    @template theme_rosehill/drawers
 
     Boost drawer template.
 
@@ -175,5 +175,9 @@ M.util.js_pending('theme_boost/loader');
 require(['theme_boost/loader', 'theme_boost/drawer'], function(Loader, Drawer) {
     Drawer.init();
     M.util.js_complete('theme_boost/loader');
+    
+    require(['theme_rosehill/drawers'], (module) => {
+        module.init();
+    });
 });
 {{/js}}

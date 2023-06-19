@@ -17,10 +17,10 @@
 defined('MOODLE_INTERNAL') || die();
 
 /**
- * A login page layout for the boost theme.
+ * A login page layout for the Rosehill theme.
  *
- * @package   theme_boost
- * @copyright 2016 Damyon Wiese
+ * @package   theme_rosehill
+ * @copyright 2023 Alex Mellor
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
