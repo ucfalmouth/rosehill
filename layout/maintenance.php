@@ -14,23 +14,21 @@
 // You should have received a copy of the GNU General Public License
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
-defined('MOODLE_INTERNAL') || die();
-
 /**
- * A login page layout for the Rosehill theme.
+ * A maintenance layout for the rosehill theme.
  *
  * @package   theme_rosehill
  * @copyright 2023 Alex Mellor
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-$bodyattributes = $OUTPUT->body_attributes();
+defined('MOODLE_INTERNAL') || die();
 
 $templatecontext = [
-    'sitename' => format_string($SITE->shortname, true, ['context' => context_course::instance(SITEID), "escape" => false]),
-    'output' => $OUTPUT,
-    'bodyattributes' => $bodyattributes
+    // We cannot pass the context to format_string, this layout can be used during
+    // installation. At that stage database tables do not exist yet.
+    'sitename' => format_string($SITE->shortname, true, ["escape" => false]),
+    'output' => $OUTPUT
 ];
 
-echo $OUTPUT->render_from_template('theme_rosehill/login', $templatecontext);
-
+echo $OUTPUT->render_from_template('theme_rosehill/maintenance', $templatecontext);

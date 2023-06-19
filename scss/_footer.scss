@@ -1,0 +1,75 @@
+.footer-standard {
+    display: none;
+}
+
+// Footer link styling
+.footer-links {
+    margin: 0;
+    padding: 1rem 0;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+
+    .footer-links__list-item {
+        flex: 0 0 auto;
+        
+        &:first-child .footer-links__link-item {
+            margin-left: 0;
+        }
+        
+        &:last-child .footer-links__link-item {
+            margin-right: 0;
+        }
+        @media screen and (min-width: 960px) {
+            &:first-child {
+                flex-grow: 1;
+            }
+        }
+    }
+
+    @media screen and (min-width: 576px) {
+        justify-content: flex-start;
+    }
+
+    @media screen and (min-width: 960px) {
+        flex-wrap: nowrap;
+    }
+
+    .footer-links__link-item {
+        color: #fff;
+        margin: .5rem;
+        font-size: .75rem;
+        font-weight: bold;
+    }
+}
+
+
+
+
+// Footer main container (not login page)
+.footer-main {
+    margin: 0;
+    background: $dark-grey;
+    padding: .5rem;
+
+    @media (min-width: 768px) {
+        padding: 1rem;
+        
+        // specificity needed to override
+        #page.drawers & {
+            margin-left: -3rem;
+            margin-right: -3rem;
+        }
+    }
+    @media (min-width: 992px) {
+        // specificity needed to override
+        #page.drawers.show-drawer-left & {
+            margin-left: -1rem;
+        }
+    }
+}
+
+
+.footer-debugging {}
