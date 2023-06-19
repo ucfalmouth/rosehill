@@ -37,7 +37,7 @@ $THEME->rendererfactory = 'theme_overridden_renderer_factory';
 $THEME->requiredblocks = '';
 $THEME->addblockposition = BLOCK_ADDBLOCK_POSITION_FLATNAV;
 $THEME->hidefromselector = false;
-
+$THEME->haseditswitch = true;
 $THEME->scss = function($theme) {
 	return theme_rosehill_get_main_scss_content($theme);
 };
