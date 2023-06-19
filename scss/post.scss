@@ -349,5 +349,15 @@ button.dt-button, div.dt-button, a.dt-button {
 	}
 }
 
+
+/* ----------------- */
+/* PAGE LAYOUT */
+/* pushes footer to bottom on very small height pages on mobile */
+@media (max-width: 991px) {
+    #page.drawers {
+        height: 100%;
+    }
+}
+
 @import './footer';
 @import './login';
