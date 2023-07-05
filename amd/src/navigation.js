@@ -43,11 +43,14 @@ $.fn.hideNavLinks = function() {
     var courseUrlCount = 0;
     $(this).each(function(i, el) {
 
-        var courseUrl = (typeof el.href === 'string' && el.href.indexOf('/course/') > 0 ? true : false);
+        var courseUrl = false;
+        if(typeof el.href === 'string' && el.href.indexOf('/course/') >= 0 && el.text !== null && $.trim(el.text) !== '') {
+            courseUrl = true;
+        }
         if(el.text === null || $.trim(el.text) === '' || (courseUrl && courseUrlCount > 0)) {
             $(el).hide();
         }
-        if( courseUrl ) {
+        if(courseUrl) {
             courseUrlCount = 1;
         }
     });
