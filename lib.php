@@ -94,3 +94,11 @@ function theme_rosehill_pluginfile($course, $cm, $context, $filearea, $args, $fo
 		send_file_not_found();
 	}
 }
+
+function is_staff($context) {
+    if (has_capability('enrol/manual:manage', $context)) {
+        return true;
+    } else {
+        return false;
+    }
+}

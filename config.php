@@ -41,9 +41,8 @@ $THEME->haseditswitch = true;
 $THEME->scss = function($theme) {
 	return theme_rosehill_get_main_scss_content($theme);
 };
-
+$CFG->themedir = $CFG->dirroot . '/theme/rosehill';
 $THEME->removedprimarynavitems = ['home','courses'];
-
 // DEBUG_DEVELOPER - NOT FOR PRODUCTION SERVERS!
 // @error_reporting(E_ALL | E_STRICT);
 // @ini_set('display_errors', '1');
