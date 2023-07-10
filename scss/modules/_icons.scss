@@ -1,0 +1,82 @@
+//==========================================================================//
+//==========================================================================//
+//                                                                          //
+//                             // ICONOGRAPHY //                            //
+//                                                                          //
+//==========================================================================//
+//==========================================================================//
+
+
+//-----------------------------------------------------
+// Import assets
+//-----------------------------------------------------
+
+@import 'https://fonts.googleapis.com/icon?family=Material+Icons';
+
+
+//-----------------------------------------------------
+// Document Icons
+//-----------------------------------------------------
+
+/* resize document icons */
+// .activityiconcontainer {
+// 	width: 30px;
+// 	height: 30px;
+// }
+// .activityiconcontainer .activityicon {
+// 	width: 20px;
+// 	height: 20px;
+// }
+
+
+//-----------------------------------------------------
+// General Activity Icon Colours
+//-----------------------------------------------------
+
+/* change default colours of activity icons – only these classes/colours can be re-styled */
+/* inner elements .activityicon & .icon use filter: invert(1) */
+.activityiconcontainer.administration {
+    background-color: #5d63f6;
+}
+
+.activityiconcontainer.assessment {
+    background-color: #eb66a2;
+}
+
+.activityiconcontainer.collaboration {
+    background-color: #f7634d;
+}
+
+.activityiconcontainer.communication {
+    background-color: #11a676;
+}
+
+.activityiconcontainer.content {
+    background-color: #399be2;
+}
+
+.activityiconcontainer.interface {
+    background-color: #a378ff;
+}
+
+
+//-----------------------------------------------------
+// Talis Activity
+//-----------------------------------------------------
+
+.aspirelists .activityiconcontainer {
+    position: relative;
+    background: #24a8b6;
+}
+
+.aspirelists .activityiconcontainer::after {
+    content: "\ea19";
+    font-family: 'Material Icons';
+    font-size: 28px;
+    color: #fff;
+
+}
+
+.aspirelists .activityiconcontainer .activityicon {
+    display: none;
+}

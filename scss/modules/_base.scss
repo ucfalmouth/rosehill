@@ -1,0 +1,97 @@
+//==========================================================================//
+//==========================================================================//
+//                                                                          //
+//                         // BASIC PAGE STYLING //                         //
+//                                                                          //
+//==========================================================================//
+//==========================================================================//
+
+
+//-----------------------------------------------------
+// Colours
+//-----------------------------------------------------
+
+$primary-yellow: #f6ce4c;
+$accent-yellow: #e2be47;
+
+$primary-green: #116a6c;
+$accent-green: #0d5456;
+
+$dark-grey: #222222;
+$dark-text: #333333;
+
+
+//-----------------------------------------------------
+// Basics
+//-----------------------------------------------------
+
+/* change colour of all links */
+a:link,
+a:visited {
+    color: $primary-green;
+}
+
+a:hover,
+a:active {
+    color: $accent-green;
+}
+
+/* gradient tint page background */
+body {
+    background: linear-gradient(#eee, #fff);
+}
+
+
+//-----------------------------------------------------
+// Buttons
+//-----------------------------------------------------
+
+/* fix text colour of anchor tags that are styled as buttons */
+a.btn-primary {
+    color: #fff;
+}
+
+/* change colour of primary buttons */
+.btn-primary {
+    background-color: $primary-green;
+    border-color: $primary-green;
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary.focus {
+    background-color: $accent-green;
+    border-color: $accent-green;
+}
+
+.btn-primary:not(:disabled):not(.disabled):active,
+.btn-primary:not(:disabled):not(.disabled).active,
+.show>.btn-primary.dropdown-toggle {
+    background-color: $accent-green;
+    border-color: $accent-green;
+}
+
+
+//-----------------------------------------------------
+// Page Layout
+//-----------------------------------------------------
+
+@media (min-width: 768px) {
+
+    /* PAGE CONTENT - force width to full-width */
+    .pagelayout-standard #page.drawers .main-inner,
+    body.limitedwidth #page.drawers .main-inner {
+        max-width: 100%;
+    }
+
+    .header-maxwidth {
+        max-width: 100%;
+    }
+}
+
+/* pushes footer to bottom on very small height pages on mobile */
+@media (max-width: 991px) {
+    #page.drawers {
+        height: 100%;
+    }
+}

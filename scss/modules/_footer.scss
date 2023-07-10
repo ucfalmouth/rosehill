@@ -1,3 +1,17 @@
+//==========================================================================//
+//==========================================================================//
+//                                                                          //
+//                            // CUSTOM FOOTER //                           //
+//                                                                          //
+//==========================================================================//
+//==========================================================================//
+
+
+// hide default help menu (bottom right)
+#page-footer .btn.btn-icon {
+    display: none;
+}
+
 .footer-standard {
     display: none;
 }
@@ -45,9 +59,6 @@
     }
 }
 
-
-
-
 // Footer main container (not login page)
 .footer-main {
     margin: 0;
@@ -68,8 +79,15 @@
         #page.drawers.show-drawer-left & {
             margin-left: -1rem;
         }
+
+        #page.drawers.show-drawer-right & {
+            margin-right: -1rem;
+        }
+
+        #page.drawers.show-drawer-right.show-drawer-left & {
+            .footer-links {
+                flex-wrap: wrap;
+            }
+        }
     }
 }
-
-
-.footer-debugging {}

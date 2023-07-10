@@ -1,18 +1,21 @@
 //==========================================================================//
 //==========================================================================//
 //                                                                          //
-//                    // THEME ROSEHILL CUSTOM STYLES //                    //
+//                            // MINOR FIXES //                             //
 //                                                                          //
 //==========================================================================//
 //==========================================================================//
 
-// Remember, order will affect the cascade...
 
-@import './modules/base';
-@import './modules/fixes';
-@import './modules/header';
-@import './modules/courses';
-@import './modules/icons';
-@import './modules/plugins';
-@import './modules/footer';
-@import './modules/login';
+/* Calendar on dashboard */
+// .maincalendar .bottom span.footer-link:after {
+// 	color: $primary-green;
+// }
+// .maincalendar .calendarmonth td.today .day-number-circle {
+// 	background-color: $primary-green;
+// }
+
+/* Only displays in footer when debugging active */
+.footer-content-debugging.bg-dark.text-light a {
+    color: #f8f9fa !important;
+}

@@ -1,0 +1,66 @@
+//==========================================================================//
+//==========================================================================//
+//                                                                          //
+//                          // HEADER & MAIN NAV //                         //
+//                                                                          //
+//==========================================================================//
+//==========================================================================//
+
+
+//-----------------------------------------------------
+// Primary Nav
+//-----------------------------------------------------
+
+.navbar.fixed-top.bg-white {
+    background-color: $primary-yellow !important;
+}
+
+/* override hover colour for main navigation */
+.navbar-nav .nav-link:hover {
+    background-color: $accent-yellow !important;
+}
+
+.navbar-nav .border-left {
+    border-color: $accent-yellow;
+}
+
+/* SVG - logo added to navbar.mustache */
+.navbar .header-logo {
+    height: 35px;
+    display: inline;
+    float: left;
+    margin-right: .3em;
+}
+
+
+//-----------------------------------------------------
+// Elevio
+//-----------------------------------------------------
+
+/* ELEVIO button (primary nav menu) */
+.ls-elevio-trigger {
+    display: inline-block;
+
+    .icon {
+        width: 24px;
+        height: 24px;
+        font-size: 24px;
+        margin: 0;
+    }
+}
+
+/* ELEVIO help (inline at bottom of page) */
+._elevio_launcher {
+    display: none !important;
+}
+
+
+//-----------------------------------------------------
+// Secondary Nav
+//-----------------------------------------------------
+
+/* hide secondary nav entries */
+.secondary-navigation li[data-key="questionbank"],
+.secondary-navigation li[data-key="contentbank"] {
+    display: none;
+}

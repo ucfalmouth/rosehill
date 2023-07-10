@@ -1,0 +1,124 @@
+//==========================================================================//
+//==========================================================================//
+//                                                                          //
+//                           // COURSES/MODULES //                          //
+//                                                                          //
+//==========================================================================//
+//==========================================================================//
+
+
+//-----------------------------------------------------
+// Add section
+//-----------------------------------------------------
+
+/* restyle course "add sections" link as button */
+.changenumsections a {
+    background-color: $primary-green;
+    border: 1px solid $accent-green;
+    color: #fff;
+    padding: 5px 10px 7px 8px;
+    border-radius: 6px;
+}
+
+.changenumsections a:hover {
+    text-decoration: none;
+    background-color: $accent-green;
+}
+
+.changenumsections a::before {
+    content: "+ ";
+}
+
+
+//-----------------------------------------------------
+// Sticky nav
+//-----------------------------------------------------
+
+/* optional: sticky secondary navigation on scroll, replaces bottom padding w/margin */
+.secondary-navigation {
+    position: sticky;
+    top: 0;
+    background-color: #fff;
+    z-index: 999;
+    padding-bottom: 0;
+    margin-bottom: 15px;
+}
+
+/* page content - force navigation to full-width */
+.secondary-navigation .navigation .nav-tabs {
+    max-width: 100%;
+}
+
+/* if less than 100% max-width is required, force content left */
+// #page.drawers .main-inner {
+// 	margin: 0 !important;
+// }
+
+
+//-----------------------------------------------------
+// Side menu
+//-----------------------------------------------------
+
+/* side menu - re-colour links */
+.courseindex .courseindex-item.pageitem {
+    background-color: $primary-green !important;
+}
+
+.moremenu .nav-link.active {
+    border-color: $primary-green !important;
+    border-top: transparent;
+}
+
+.activity-info .btn-sm {
+    margin-bottom: 1em;
+}
+
+
+//-----------------------------------------------------
+// Course Overview
+//-----------------------------------------------------
+
+/* hide Summary option from menu */
+.dropdown .dropdown-menu a[data-value="summary"] {
+    display: none;
+}
+
+
+//-----------------------------------------------------
+// Course Navigation
+//-----------------------------------------------------
+
+/* reduce padding top/bottom on nav items > ul > li */
+.courseindex .courseindex-section .courseindex-sectioncontent .courseindex-item {
+    padding-top: .1rem;
+    padding-bottom: .1rem;
+}
+
+/* add extra space to bottom of list */
+.courseindex .courseindex-section .courseindex-sectioncontent .courseindex-item:last-child {
+    margin-bottom: .5rem;
+}
+
+/* fix to move the mobile course menu in front of secondary menu */
+.drawer-toggles .drawer-right-toggle,
+.drawer-toggles .drawer-left-toggle {
+    z-index: 1000;
+}
+
+/* style "course index" header added via JS */
+#theme_boost-drawers-courseindex .drawerheader .courseindex {
+    display: block;
+    width: 100%;
+    font-weight: bold;
+    background-color: #000;
+    color: #fff;
+    border-radius: 5px;
+    padding: 0.15em 0.6em 0.25em;
+    margin: 15px 3em auto .4em;
+    text-transform: capitalize;
+}
+
+/* changing colour of resource links in course menu */
+// .courseindex .courseindex-section a[href*="/resource/"] {
+// 	color: #999 !important;
+// }
