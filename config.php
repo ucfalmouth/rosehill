@@ -43,7 +43,9 @@ $THEME->scss = function($theme) {
 };
 
 $THEME->removedprimarynavitems = ['home','courses'];
-
+$THEME->activityheaderconfig = [
+    'notitle' => true
+];
 // DEBUG_DEVELOPER - NOT FOR PRODUCTION SERVERS!
 // @error_reporting(E_ALL | E_STRICT);
 // @ini_set('display_errors', '1');
