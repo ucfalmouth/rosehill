@@ -64,19 +64,58 @@
 // Talis Activity
 //-----------------------------------------------------
 
-.aspirelists .activityiconcontainer {
-    position: relative;
-    background: #24a8b6;
+// .aspirelists .activityiconcontainer {
+//     position: relative;
+//     background: #24a8b6;
+// }
+
+// .aspirelists .activityiconcontainer::after {
+//     content: "\ea19";
+//     font-family: 'Material Icons';
+//     font-size: 28px;
+//     color: #fff;
+
+// }
+
+// .aspirelists .activityiconcontainer .activityicon {
+//     display: none;
+// }
+
+
+
+.modtype_aspirelists .activityiconcontainer,
+.modicon_aspirelists {
+    overflow: hidden;
 }
 
-.aspirelists .activityiconcontainer::after {
-    content: "\ea19";
-    font-family: 'Material Icons';
-    font-size: 28px;
-    color: #fff;
-
+.modtype_aspirelists .activityicon,
+.modicon_aspirelists .activityicon {
+    width: 50px;
+    height: 50px;
 }
 
-.aspirelists .activityiconcontainer .activityicon {
+
+//-----------------------------------------------------
+// Turnitin
+//-----------------------------------------------------
+
+.modtype_turnitintooltwo .activityiconcontainer img,
+.modicon_turnitintooltwo.activityiconcontainer img {
     display: none;
+}
+
+.modtype_turnitintooltwo .activityiconcontainer,
+.modicon_turnitintooltwo.activityiconcontainer {
+    background: #eb66a2;
+    position: relative;
+
+}
+
+.modtype_turnitintooltwo .activityiconcontainer::after,
+.modicon_turnitintooltwo.activityiconcontainer::after {
+    content: "";
+    background: url([[pix:theme_rosehill|turnitin-logo-white]]) no-repeat center center;
+    width: 50px;
+    height: 50px;
+    background-size: 24px;
 }
