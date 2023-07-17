@@ -8,16 +8,6 @@
 
 
 //-----------------------------------------------------
-// Talis aspire reading lists (old and new version)
-// 
-// - mod_lti
-// - mod_aspirelists
-//-----------------------------------------------------
-
-
-
-
-//-----------------------------------------------------
 // My assessment and feedback
 //-----------------------------------------------------
 
@@ -128,4 +118,55 @@ a.dt-button {
 
 .path-report-myfeedback .personaltutoremail>img {
     display: none;
+}
+
+
+//-----------------------------------------------------
+// Assignment (path-mod-assign, path-grade-grading)
+//-----------------------------------------------------
+
+// Fix for displaying content heavy rubric table
+.gradingform_rubric {
+    max-width: 100%;
+
+    .criteria {
+        display: table;
+
+        .criterion .description {
+            width: 22%;
+        }
+    }
+}
+
+#rubric-rubric {
+    overflow-x: scroll;
+
+    table {
+        min-width: 1000px;
+    }
+}
+
+
+//-----------------------------------------------------
+// Old Talis
+//-----------------------------------------------------
+
+// inline iframe
+.aspirelists_inline_list {
+    width: 100%;
+    min-height: 600px;
+
+    @media screen and (min-width: 768px) {
+        min-height: 800px;
+    }
+}
+
+
+//-----------------------------------------------------
+// LTI Tool (New Talis)
+//-----------------------------------------------------
+
+// set default iframe height at least height of viewport plus half
+.path-mod-lti iframe#contentframe {
+    min-height: 150vh
 }
