@@ -19,3 +19,25 @@
 .footer-content-debugging.bg-dark.text-light a {
     color: #f8f9fa !important;
 }
+
+
+//-----------------------------------------------------
+// Legacy Frame Top pages (e.g. aspirelists)
+//-----------------------------------------------------
+
+// Fixes duplicate headings and some layout issues
+.pagelayout-frametop {
+    background: #fff;
+
+    #region-main h2 {
+        margin-bottom: 2rem;
+    }
+
+    [role="main"] h2 {
+        display: none
+    }
+
+    #page {
+        padding-bottom: 1rem
+    }
+}
