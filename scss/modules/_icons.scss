@@ -81,7 +81,7 @@
 //     display: none;
 // }
 
-
+// Legacy Talis
 
 .modtype_aspirelists .activityiconcontainer,
 .modicon_aspirelists {
@@ -92,6 +92,14 @@
 .modicon_aspirelists .activityicon {
     width: 50px;
     height: 50px;
+}
+
+// Talis 1.3 (new talis lti tool)
+
+.modicon_lti .activityicon[src*="talis"],
+.modtype_lti .activityicon[src*="talis"],
+.modicon_lti_type_7 .icon {
+    filter: brightness(0) invert(1);
 }
 
 
