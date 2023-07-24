@@ -6,6 +6,13 @@
 //==========================================================================//
 //==========================================================================//
 
+//-----------------------------------------------------
+// Blackboard Ally for LMS
+//-----------------------------------------------------
+
+.filter-ally-wrapper.ally-image-wrapper {
+	position: relative;
+}
 
 //-----------------------------------------------------
 // My assessment and feedback
@@ -45,6 +52,11 @@ a.dt-button {
     background-image: none;
     padding-right: 6px;
     white-space: normal;
+}
+
+/* correct background when focussed */
+.path-report-myfeedback .nav-tabs > li > a:focus {
+	background-color: #f8f9fa;
 }
 
 .path-report-myfeedback #reportPrint:hover,

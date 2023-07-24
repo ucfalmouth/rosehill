@@ -71,6 +71,18 @@ a.btn-primary {
     border-color: $accent-green;
 }
 
+//-----------------------------------------------------
+// Drop down menu (profile and additional menu options)
+//-----------------------------------------------------
+
+.dropdown-item.active,
+.dropdown-item:active,
+.dropdown-item:hover,
+.dropdown-item:focus,
+.dropdown-item:focus-within {
+	background-color: $primary-green;
+}
+
 
 //-----------------------------------------------------
 // Page Layout
