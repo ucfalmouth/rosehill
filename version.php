@@ -26,13 +26,13 @@
 // This line protects the file from being accessed by a URL directly.
 defined('MOODLE_INTERNAL') || die();
 
-$plugin->version = '2023062300';
+$plugin->version = '2023072400';
 $plugin->requires = '2022112800';
 // $plugin->supported = TODO;   // Available as of Moodle 3.9.0 or later.
 // $plugin->incompatible = TODO;   // Available as of Moodle 3.9.0 or later.
 $plugin->component = 'theme_rosehill';
 // $plugin->maturity = MATURITY_STABLE;
-$plugin->release = 'v1.1.0';
+$plugin->release = 'v1.2.0';
 
 $plugin->dependencies = [
     'theme_boost' => '2022112800'
