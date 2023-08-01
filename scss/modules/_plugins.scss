@@ -182,3 +182,45 @@ a.dt-button {
 .path-mod-lti iframe#contentframe {
     min-height: 150vh
 }
+
+
+//-----------------------------------------------------
+// Grading (Rubric)
+//-----------------------------------------------------
+
+.path-mod-assign [data-region="review-panel"].collapsed+[data-region="grade-panel"] [data-region="grade"],
+.path-mod-assign [data-region="grade-panel"].fullwidth [data-region="grade"] {
+	max-width: 1200px;
+}
+.path-mod-assign [data-region="grade-panel"] {
+
+	.gradingform_rubric .criterion {
+		.levels {
+			background-color: transparent;
+
+			.level {
+				.level-wrapper {
+					white-space: nowrap;
+					padding: 0 .2em;
+				}
+
+				&.last {
+					border-right: none;
+				}
+			}
+		}
+
+		&.even {
+			background-color: #f0f0f0;
+		}
+	}
+	.gradingform_rubric .criteria td {
+		height: 4em;
+		vertical-align: middle;
+
+		.text-break {
+			cursor: pointer;
+			font-size: 90%;
+		}
+	}
+}

@@ -71,6 +71,7 @@ a.btn-primary {
     border-color: $accent-green;
 }
 
+
 //-----------------------------------------------------
 // Drop down menu (profile and additional menu options)
 //-----------------------------------------------------
@@ -93,7 +94,11 @@ a.btn-primary {
     /* PAGE CONTENT - force width to full-width */
     .pagelayout-standard #page.drawers .main-inner,
     body.limitedwidth #page.drawers .main-inner {
-        max-width: 100%;
+		max-width: 100%;
+
+		/* less than 100% max-width */
+		// margin-left: 0;
+		// max-width: 1200px;
     }
 
     .header-maxwidth {
