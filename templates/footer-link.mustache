@@ -15,14 +15,10 @@
     along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 }}
 {{!
-    @template theme_rosehill/footer-links
+    @template theme_rosehill/footer-link
 
-    Page footer links.
+    Page footer link.
 
 }}
 
-<ul class="footer-links">
-    {{#items}}
-        {{> theme_rosehill/footer-link }}
-    {{/items}}
-</ul>
+<li class="footer-links__list-item"><a href="{{{url}}}" class="footer-links__link-item">{{{text}}}</a></li>

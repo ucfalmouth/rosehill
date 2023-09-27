@@ -36,29 +36,66 @@ defined('MOODLE_INTERNAL') || die;
  */
 class core_renderer extends \theme_boost\output\core_renderer {
 
-	/**
+    /**
 	 * Renders the footer links.
 	 *
 	 * @return string the HTML for the footer links.
 	 */
-	public function rosehillfooterlinks() {
+    public function getFooterLinks() {
 
-		$footeritems = [
-			'<a href="http://www.falmouth.ac.uk/" class="footer-links__link-item">&copy; ' . date('Y') . ' Falmouth University</a>',
-			'<a href="http://dl.falmouth.ac.uk" class="footer-links__link-item">Digital Learning</a>',
-			'<a href="https://falmouthac.sharepoint.com/ict/info/Shared%20Documents/Forms/AllItems.aspx?id=%2Fict%2Finfo%2FShared%20Documents%2FMoodle%20Copyright%20%26%20Data%20Protection%20Statement%2Epdf&parent=%2Fict%2Finfo%2FShared%20Documents&p=true&slrid=7e9f7d9e-50c7-6000-1297-403eb05f7bff" class="footer-links__link-item">Copyright compliance</a>',
-			'<a href="https://www.falmouth.ac.uk/data-privacy-learning-space-users" class="footer-links__link-item">Privacy</a>',
-			'<a href="https://student.falmouth.ac.uk" class="footer-links__link-item">Student portal</a>',
-			'<a href="https://www.falmouth.ac.uk/falmouth-learning-space-accessibility-statement" class="footer-links__link-item">Accessibility</a>'
-		];
+        // Get all footer link fields from theme settings
+        $footeritems = [
+            'footerLink1' => [
+                get_config('theme_rosehill', 'footerlinktext1'),
+                get_config('theme_rosehill', 'footerlinkurl1')
+            ],
+            'footerLink2' => [
+                get_config('theme_rosehill', 'footerlinktext2'),
+                get_config('theme_rosehill', 'footerlinkurl2')
+            ],
+            'footerLink3' => [
+                get_config('theme_rosehill', 'footerlinktext3'),
+                get_config('theme_rosehill', 'footerlinkurl3')
+            ],
+            'footerLink4' => [
+                get_config('theme_rosehill', 'footerlinktext4'),
+                get_config('theme_rosehill', 'footerlinkurl4')
+            ],
+            'footerLink5' => [
+                get_config('theme_rosehill', 'footerlinktext5'),
+                get_config('theme_rosehill', 'footerlinkurl5')
+            ],
+            'footerLink6' => [
+                get_config('theme_rosehill', 'footerlinktext6'),
+                get_config('theme_rosehill', 'footerlinkurl6')
+            ]
+        ];
 
-		$templatedata = [
-			'footeritems' => $footeritems
-		];
+        // Temporary array for building template data
+        // - included copyright info by default
+        $tmp = [ 
+            [
+                'text'=>'&copy; ' . date('Y') . ' Falmouth University',
+                'url' => 'https://www.falmouth.ac.uk/'
+            ]
+        ];
+        
+        // loop through, trim whitespace and only render if both text and url are filled out
+        foreach ($footeritems as $key => $value) {
+            if (strlen(trim($value[0])) > 0) {
+                if (strlen(trim($value[1])) > 0) {
+                    array_push($tmp, array('text'=>$value[0], 'url'=>$value[1]));
+                }
+            }
+        }
 
-		return $this->render_from_template('theme_rosehill/footer-links', $templatedata);
+        // Setup for use in template
+        $items = [
+            'items' => $tmp
+        ];
 
-	}
+        return $this->render_from_template('theme_rosehill/footer-links', $items);
+    }
 
 	/**
 	 * change colour of default course background overview to be uniform
