@@ -41,3 +41,25 @@
         padding-bottom: 1rem
     }
 }
+
+
+//-----------------------------------------------------
+// Theme Rosehill Footer Options Page
+//
+// - Adjust spacing around related item fields
+//
+//-----------------------------------------------------
+
+#theme_rosehill_footer {
+    margin-bottom: 2rem
+}
+
+.form-item[id*="admin-footerlinkurl"] {
+    border-bottom: 1px solid #eee;
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+}
+
+.form-item[id*="admin-footerlinktext"] {
+    padding-top: 3rem;
+}
