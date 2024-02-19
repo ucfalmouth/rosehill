@@ -63,3 +63,42 @@
 .form-item[id*="admin-footerlinktext"] {
     padding-top: 3rem;
 }
+
+
+//-----------------------------------------------------
+// Layout width changes
+//
+// - Adjust content width, adjust menu width, adjust menu truncation.
+//
+//-----------------------------------------------------
+
+@media (min-width: 768px) {
+
+    /* PAGE CONTENT - force width to full-width */
+    .pagelayout-standard #page.drawers .main-inner,
+    body.limitedwidth #page.drawers .main-inner {
+        margin-left: 0;
+        max-width: 1200px;
+    }
+}
+
+/* wider nav */
+@media (min-width: 992px) {
+
+    #page.drawers.show-drawer-left,
+    #page.drawers.show-drawer-left.show-drawer-right {
+        // fallback for older browsers (pre 2019) not supporting min()
+        margin-left: calc(285px + 6%);
+        margin-left: min(28%, 385px);
+    }
+
+    .drawer.drawer-left {
+        width: 28%;
+        max-width: 385px;
+    }
+}
+
+/* bring truncated nav text into view on hover */
+.courseindex .courseindex-section .courseindex-item .courseindex-link.text-truncate:hover {
+    white-space: initial;
+}
