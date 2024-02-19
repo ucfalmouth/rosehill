@@ -26,7 +26,16 @@ defined('MOODLE_INTERNAL') || die();
 if ($ADMIN->fulltree) {
 
 	$settings = new theme_boost_admin_settingspage_tabs('themesettingrosehill', get_string('configtitle', 'theme_rosehill'));
-	$page = new admin_settingpage('theme_rosehill_general', get_string('generalsettings', 'theme_rosehill'));
+	
+    
+
+    // ///////////////////////////////////////////////
+    // 
+    // GENERAL SETTINGS
+    //
+    // ///////////////////////////////////////////////
+
+    $page = new admin_settingpage('theme_rosehill_general', get_string('generalsettings', 'theme_rosehill'));
 
 	// Unaddable blocks.
 	// Blocks to be excluded when this theme is enabled in the "Add a block" list: Administration, Navigation, Courses and
@@ -95,7 +104,14 @@ if ($ADMIN->fulltree) {
 	// Must add the page after definiting all the settings!
 	$settings->add($page);
 
-	// Advanced settings.
+    
+
+    // ///////////////////////////////////////////////
+    // 
+    // ADVANCED SETTINGS
+    //
+    // ///////////////////////////////////////////////
+
 	$page = new admin_settingpage('theme_rosehill_advanced', get_string('advancedsettings', 'theme_rosehill'));
 
 	// Raw SCSS to include before the content.
@@ -112,7 +128,15 @@ if ($ADMIN->fulltree) {
 
 	$settings->add($page);
 
-	$page = new admin_settingpage('theme_rosehill_custom', get_string('customsettings', 'theme_rosehill'));
+
+
+    // ///////////////////////////////////////////////
+    // 
+    // CUSTOM SETTINGS
+    //
+    // ///////////////////////////////////////////////
+	
+    $page = new admin_settingpage('theme_rosehill_custom', get_string('customsettings', 'theme_rosehill'));
 
 	$setting = new admin_setting_configcheckbox('theme_rosehill/collapsetopics',
 		get_string('collapsetopics', 'theme_rosehill'), get_string('collapsetopics_desc', 'theme_rosehill'), 0, 1, 0);
@@ -131,4 +155,79 @@ if ($ADMIN->fulltree) {
 
 	$settings->add($page);
 
+
+
+    // ///////////////////////////////////////////////
+    // 
+    // FOOTER LINKS SETTINGS
+    //
+    // ///////////////////////////////////////////////
+
+    $urldesc = 'Enter a URL for the link text.';
+    $linkdesc = 'Enter the link text for the URL.';
+    // footersettings str
+    $page = new admin_settingpage('theme_rosehill_footer', 'Footer settings', 'theme_rosehill');
+
+    // Link 1
+    $setting = new admin_setting_configtext('theme_rosehill/footerlinktext1', 'Footer link 1 text', $linkdesc, '', PARAM_NOTAGS, 50);  
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+
+    $setting = new admin_setting_configtext('theme_rosehill/footerlinkurl1', 'Footer link 1 URL', $urldesc, '', PARAM_NOTAGS, 50);  
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+
+
+    // Link 2
+    $setting = new admin_setting_configtext('theme_rosehill/footerlinktext2', 'Footer link 2 text', $linkdesc, '', PARAM_NOTAGS, 50);  
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+
+    $setting = new admin_setting_configtext('theme_rosehill/footerlinkurl2', 'Footer link 2 URL', $urldesc, '', PARAM_NOTAGS, 50);  
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+
+
+    // Link 3
+    $setting = new admin_setting_configtext('theme_rosehill/footerlinktext3', 'Footer link 3 text', $linkdesc,  '', PARAM_NOTAGS, 50);  
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+
+    $setting = new admin_setting_configtext('theme_rosehill/footerlinkurl3', 'Footer link 3 URL', $urldesc,  '', PARAM_NOTAGS, 50);  
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+
+
+    // Link 4
+    $setting = new admin_setting_configtext('theme_rosehill/footerlinktext4', 'Footer link 4 text', $linkdesc,  '', PARAM_NOTAGS, 50);  
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+
+    $setting = new admin_setting_configtext('theme_rosehill/footerlinkurl4', 'Footer link 4 URL', $urldesc,  '', PARAM_NOTAGS, 50);  
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+
+
+    // Link 5
+    $setting = new admin_setting_configtext('theme_rosehill/footerlinktext5', 'Footer link 5 text', $linkdesc,  '', PARAM_NOTAGS, 50);  
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+
+    $setting = new admin_setting_configtext('theme_rosehill/footerlinkurl5', 'Footer link 5 URL', $urldesc,  '', PARAM_NOTAGS, 50);  
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+
+
+    // Link 6
+    $setting = new admin_setting_configtext('theme_rosehill/footerlinktext6', 'Footer link 6 text', $linkdesc,  '', PARAM_NOTAGS, 50);  
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+
+    $setting = new admin_setting_configtext('theme_rosehill/footerlinkurl6', 'Footer link 6 URL', $urldesc,  '', PARAM_NOTAGS, 50);  
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+
+
+    $settings->add($page);
+    
 }
