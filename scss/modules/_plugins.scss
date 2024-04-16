@@ -200,7 +200,7 @@ a.dt-button {
 
 			.level {
 				.level-wrapper {
-					white-space: nowrap;
+					white-space: normal;
 					padding: 0 .2em;
 				}
 
@@ -216,7 +216,7 @@ a.dt-button {
 	}
 	.gradingform_rubric .criteria td {
 		height: 4em;
-		vertical-align: middle;
+		vertical-align: top;
 
 		.text-break {
 			cursor: pointer;

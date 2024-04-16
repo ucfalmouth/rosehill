@@ -32,7 +32,7 @@ $plugin->requires = '2022112800';
 // $plugin->incompatible = TODO;   // Available as of Moodle 3.9.0 or later.
 $plugin->component = 'theme_rosehill';
 // $plugin->maturity = MATURITY_STABLE;
-$plugin->release = 'v1.3.0';
+$plugin->release = 'v1.4.0';
 
 $plugin->dependencies = [
     'theme_boost' => '2022112800'

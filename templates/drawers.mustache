@@ -176,8 +176,9 @@ require(['theme_boost/loader', 'theme_boost/drawer'], function(Loader, Drawer) {
     Drawer.init();
     M.util.js_complete('theme_boost/loader');
     
-    require(['theme_rosehill/drawers'], (module) => {
+    require(['theme_rosehill/drawers', 'theme_rosehill/panopto-fix'], (module, panoptoFix) => {
         module.init();
+        panoptoFix.init();
     });
 });
 {{/js}}
